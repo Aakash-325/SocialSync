@@ -1,15 +1,31 @@
 import Conversation from "../model/Conversation";
 
 export const AddConversation = async (req, res) => {
-  const newConversation = new Conversation({
-    members: [req.body.senderId, req.body.receiverId],
+  const { senderId, receiverId } = req.body;
+
+  const existingConversation = await Conversation.findOne({
+    members: { $all: [senderId, receiverId] },
   });
- 
+
+  console.log(existingConversation)
+  
+  if (existingConversation) {
+    return res.status(409).json({
+      error: "Conversation already exists between these users.",
+      existingConversationId: existingConversation._id,
+    });
+  }
+
+  const newConversation = new Conversation({
+    members: [senderId, receiverId],
+  });
+
   try {
     const savedConversation = await newConversation.save();
-    res.status(200).json(savedConversation);
+    res.status(201).json(savedConversation);
   } catch (err) {
-    res.status(500).json(err);
+    console.error(err);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 

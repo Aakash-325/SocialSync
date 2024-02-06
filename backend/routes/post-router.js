@@ -1,6 +1,5 @@
 import { createPost, deletePost, getPost, postComment, postReaction, updatePost,getComments } from "../controller/Post";
 import express from "express";
-import { verifyToken } from "../middleware/auth";
 
 const PostRouter = express.Router();
 

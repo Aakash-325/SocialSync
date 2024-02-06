@@ -56,8 +56,8 @@ app.use(upload.single('file'));
 app.use("/api/auth", AuthRouter);
 app.use("/api/user", UserRouter);
 app.use("/api/post", PostRouter);
-app.use("/api/conversation", ConversationRouter)
-app.use("/api/message", MessageRouter)
+app.use("/api/conversation", ConversationRouter);
+app.use("/api/message", MessageRouter);
 
 mongoose
   .connect(process.env.Conn_String, { useNewUrlParser: true, useUnifiedTopology: true })
