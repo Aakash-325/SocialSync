@@ -235,7 +235,7 @@ export const Sidebar = () => {
             p={1}
             style={{ marginRight: "0.5rem" }}
           />
-          Create
+          Add Post
           <Icon ml="20" as={BsPlusCircle} fontSize="md" color="gray.800" />
         </NavItem>
 

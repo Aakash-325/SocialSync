@@ -138,15 +138,6 @@ const Post = ({ post }) => {
               Comments
             </Text>
           </Flex>
-
-          <Flex alignItems="center" gap="10px" fontSize="14px">
-            <Box as="span" mr={1} color={iconColor}>
-              <BsShare />
-            </Box>
-            <Text color={textColor} as="span">
-              Share
-            </Text>
-          </Flex>
         </Flex>
         {commentOpen && <Comments post={post} />}
       </Box>

@@ -2,7 +2,6 @@ import { Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import API_ENDPOINT from "../../config";
-import { chakra } from "@chakra-ui/react";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -14,7 +13,7 @@ const Conversation = (conversation) => {
   useEffect(() => {
     const friendId = conversation?.conversation?.members?.find(
       (m) => m !== user._id
-    );
+    ); 
 
     const getUser = async () => {
       try {

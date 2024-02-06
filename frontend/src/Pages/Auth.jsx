@@ -72,7 +72,7 @@ const Auth = () => {
               title: "Account created.",
               description: "We've created your account for you.",
               status: "success",
-              duration: 2000,
+              duration: 4000,
               isClosable: true,
             });
             window.location.reload(true);
@@ -83,7 +83,7 @@ const Auth = () => {
             title: "Error",
             description: error.response.data.message,
             status: "error",
-            duration: 9000,
+            duration: 7000,
             isClosable: true,
           });
         });
@@ -101,7 +101,7 @@ const Auth = () => {
               title: "login successful",
               description: "you have successfully Logged In",
               status: "success",
-              duration: 2000,
+              duration: 4000,
               isClosable: true,
             });
             console.log(response.data);
@@ -114,7 +114,7 @@ const Auth = () => {
             title: "Error",
             description: error.response?.data?.message,
             status: "error",
-            duration: 9000,
+            duration: 7000,
             isClosable: true,
           });
         });

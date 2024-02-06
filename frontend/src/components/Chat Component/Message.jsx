@@ -15,7 +15,7 @@ const Message = ({ message, own }) => {
       <Box>
         <Flex align="center" gap="4">
           <Image
-            src="https://vineveraskincare.files.wordpress.com/2017/03/vine-vera-makeup-tips-to-keep-you-selfie-ready-woman.jpg"
+            src="https://miro.medium.com/v2/resize:fit:2400/2*Wvta-LVQiGgrlp9N5z5AjA.jpeg"
             alt="profilepic"
             w="40px"
             h="40px"
